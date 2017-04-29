@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/layout_apr27.css">
+
+</head>
+<body>
+
+
+<div class="flex-container">
+<header>
+  <h1>Ombudsman Corporate Services</h1>
+</header>
+
+<nav class="nav">
+
+<h2>Services</h2>
+
+<button class="accordion">Travel</button>
+<div class="panel">
+  <ul>
+ <form method ="get" action="#Travel"><button class = "service"><li> All Travel Services </li></button></form>
+  <form method ="get" action="#DutyTravelCoord"><button class = "service"><li> Duty Travel Coordination </li></button></form>
+  <form method ="get" action="#DutyTravelExpenseClaim"><button class = "service"><li> Duty Travel Expense Claim Processing </li></button></form>
+  <form method ="get" action="#MinorTravelExpenseClaim"><button class = "service"><li> Minor Travel Expense Claim Processing </li></button></form>
+  <form method ="get" action="#TaxiChits"><button class = "service"><li> Taxi Chits </li></button>
+  <form method ="get" action="#IDTCInquiries"><button class = "service"><li> IDTC Travel Card - General Inquiries </li></button></form>
+  </u1>
+</div>
+
+<button class="accordion">Mail</button>
+<div class="panel">
+<ul>
+  <form method ="get" action="#Mail"><button class = "service"><li> All Mail Services </li></button></form>
+  <form method ="get" action="#ByHand"><button class = "service"><li> By Hand </li></button></form>
+  <form method ="get" action="#CourierServices"><button class = "service"><li> Courier Services</li></button></form>
+  <form method ="get" action="#DNDInternal"><button class = "service"><li> DND Internal Mail </li></button></form>
+  <form method ="get" action="#CanadaPost"><button class = "service"><li> Canada Post </li></button></form>
+  </u1>
+  </div>
+
+<button class="accordion">IT - Protected A & Standalone </button>
+<div class="panel">
+<ul>
+<button class="accordion">Section 3.1</button>
+  <button class = "service"><li> item 0 </li></button>
+  <button class = "service"><li> item 1 </li></button>
+  <button class = "service"><li> item 2 </li></button>
+  </u1>
+  </div>
+</nav>
+
+
+
+<article class="article">
+
+
+   <div id= "Travel"><a name='Travel'></a>
+  <h1>Travel Services</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  
+  </div>
+  
+  <div id= "DutyTravelCoord"><a name='DutyTravelCoord'></a>
+  <h1>Duty Travel Coordination</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  
+  </div>
+  
+  <div id= "DutyTravelExpenseClaim"><a name='DutyTravelExpenseClaim'></a>
+  <h1>Duty Travel Expense Claim Processing</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  
+  </div>
+  
+  <div id= "MinorTravelExpenseClaim"><a name='MinorTravelExpenseClaim'></a>
+  <h1>Minor Travel Expense Claim Processing</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  
+  </div>
+  
+  <div id= "TaxiChits"><a name='TaxiChits'></a>
+  <h1>Taxi Chits</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+  
+  <div id= "IDTCInquiries"><a name='IDTCInquiries'></a>
+  <h1>IDTC Travel Card - General Inquiries</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+  <div id= "Mail"><a name='Mail'></a>
+  <h1>Mail Services</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+  <div id= "ByHand"><a name='ByHand'></a>
+  <h1>By Hand</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+  <div id= "CourierServices"><a name='CourierServices'></a>
+  <h1>Courier Services</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+<div id= "DNDInternal"><a name='DNDInternal'></a>
+  <h1>DND Internal Mail</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+<div id= "CanadaPost"><a name='CanadaPost'></a>
+  <h1>Canada Post</h1>
+  <h2> Service </h2>
+  <p> service requirements </p>
+  </div>
+
+<script>
+var htmlImport = document.querySelector('link[rel="import"]').import;
+var htmlDoc = htmlImport.import;
+var htmlMessage = htmlDoc.querySelector('.post');
+document.body.appendChild(htmlMessage.cloneNode(true));
+</script>
+
+
+
+</article>
+
+
+<footer>Isabelle Kosteniuk 2017</footer>
+</div>
+
+
+<script src = "scripts/accordion.js"></script>
+
+</body>
+</html>
+

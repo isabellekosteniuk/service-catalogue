@@ -1,0 +1,95 @@
+body {
+	background-color: #eee;
+}
+
+header {margin-left:30%;font-size: 15px;background: lightgrey;color:black;height:20%;font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+footer {font-size: 15px;background: lightgrey;color:white;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: left;
+    margin-left: 30%;
+}
+
+
+.nav {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background:#eee;
+    width: 25%;
+    position: fixed;
+    height: 60%;
+    overflow: auto;
+
+
+
+}
+
+.nav ul {
+	background: #eee;
+    list-style-type: none;
+    padding: 0;
+	width: 100%;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width:800px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #eee;
+}
+
+button.accordion {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd; 
+}
+
+button.service {
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;}
+	
+button.service.active, button.service:hover { background-color: #ddd; }
