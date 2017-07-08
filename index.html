@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app = "serviceApp">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/layout.css">
+	<script src="scripts/libraries/angular.js"></script>
+	<script src="scripts/libraries/angular-route.js"></script>
+	<script src="scripts/serviceApp.js"></script>
+</head>
+
+<body ng-controller = "mainController">
+
+	<div class="flex-container">
+	
+	<header>
+  		<h1>Service Catalogue</h1>
+	</header>
+
+	<nav class="nav" ng-controller = "mainController">
+
+		<a href = "#/" style="text-decoration:none"><h2>Services</h2></a>
+			<div ng-repeat = "catagory in catalogue track by $index" ng-init = "idMain = $index">
+				<button ng-click = "clicked = buttonClick(idMain, clicked)"  class="accordion">{{catagory.name}}</button>
+				<div ng-repeat = "service in catagory.services track by $index" ng-init = "idSub = $index">
+					<ul ng-show = "clicked"><a href = "#/{{idMain}}/{{idSub}}">{{service.name}}</a></ul>
+				</div>
+			</div>
+	</nav>
+
+	<article class="article">
+		<div ng-view></div>
+	</article>
+	
+	<script type="text/ng-template" id="main.html">
+		<h2>{{name}}</h2>
+		<p>{{message}}</p>
+		<div ng-repeat = "service in services">
+			<a href = "#/{{idMain}}/{{$index}}"><h3>{{service.name}}</h3></a> 
+			<p>{{service.about}}</p>
+		</div>
+			<p><a back>Back</a></p>		
+	</script>
+
+	<script type="text/ng-template" id="page.html">
+		<h2>{{name}}</h2>
+		<p>{{description}}</p>
+		<div ng-bind-html = "mailTo"></div>
+		<div ng-repeat = "form in forms"><a href = "#/{{formLinks[$index]}}">{{form}}</a></div>
+		<p><a back>Back</a></p>
+	</script>
+
+
+<footer>Isabelle Kosteniuk 2017</footer>
+
+</div>
+
+</body>
+</html>
+
