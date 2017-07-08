@@ -1,4 +1,4 @@
-This is the README file for the DND/CAF Ombudsman service request app. This document contains instructions on modifying the services available through the site.
+This is the README file for https://github.com/isabellekosteniuk/service-catalogue. This document contains instructions on modifying the services available through the site.
 
 Adding Service
 
