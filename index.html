@@ -13,7 +13,7 @@
 	<div class="flex-container">
 	
 	<header>
-  		<h1>Service Catalogue</h1>
+  		<img src= "ombudsman-logo-index.png"><h1>Ombudsman Corporate Services</h1>
 	</header>
 
 	<nav class="nav" ng-controller = "mainController">
@@ -21,7 +21,7 @@
 		<a href = "#/" style="text-decoration:none"><h2>Services</h2></a>
 			<div ng-repeat = "catagory in catalogue track by $index" ng-init = "idMain = $index">
 				<button ng-click = "clicked = buttonClick(idMain, clicked)"  class="accordion">{{catagory.name}}</button>
-				<div ng-repeat = "service in catagory.services track by $index" ng-init = "idSub = $index">
+				<div ng-repeat = "service in catagory.services |filter:query track by $index" ng-init = "idSub = $index">
 					<ul ng-show = "clicked"><a href = "#/{{idMain}}/{{idSub}}">{{service.name}}</a></ul>
 				</div>
 			</div>
@@ -30,30 +30,57 @@
 	<article class="article">
 		<div ng-view></div>
 	</article>
+
+	<script type="text/ng-template" id="search.html">
+
+		<label>Search: <input ng-model="query"></label>
+		<div ng-repeat = "catagory in catalogue track by $index" ng-init = "idMain = $index">
+		<a style="text-decoration:none" href="#/{{idMain}}"><h2>{{catagory.name}}</h2></a>
+		<div ng-repeat = "service in catagory.services | filter:query" ng-init="idx = $index">
+			<p>
+			<a href = "#/{{idMain}}/{{idx}}"><h3>{{service.name}}</h3></a>
+			{{service.about}}
+			</p>
+		</div>
+		</div>
+
+	</script>
 	
 	<script type="text/ng-template" id="main.html">
 		<h2>{{name}}</h2>
 		<p>{{message}}</p>
-		<div ng-repeat = "service in services">
-			<a href = "#/{{idMain}}/{{$index}}"><h3>{{service.name}}</h3></a> 
-			<p>{{service.about}}</p>
+
+		<label>Search: <input ng-model="query"></label>
+
+		<div ng-repeat = "service in services | filter:query" ng-init="idx = $index">
+			<p>
+			<a href = "#/{{idMain}}/{{idx}}"><h3>{{service.name}}</h3></a>
+			{{service.about}}
+			</p>
+
 		</div>
+
+
 			<p><a back>Back</a></p>		
 	</script>
 
 	<script type="text/ng-template" id="page.html">
 		<h2>{{name}}</h2>
-		<p>{{description}}</p>
+		<div ng-repeat = "description in descriptions"> <p>{{description}}</p> </div>
 		<div ng-bind-html = "mailTo"></div>
-		<div ng-repeat = "form in forms"><a href = "#/{{formLinks[$index]}}">{{form}}</a></div>
+		<div ng-repeat = "form in forms"><a href = "{{formLinks[$index]}}">{{form}}</a></div>
 		<p><a back>Back</a></p>
 	</script>
 
 
-<footer>Isabelle Kosteniuk 2017</footer>
+
+
+<footer>DND/CAF Ombudsman 2017</footer>
 
 </div>
 
 </body>
 </html>
+
+
 
