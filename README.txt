@@ -1,4 +1,4 @@
-This is the README file for https://github.com/isabellekosteniuk/service-catalogue. This document contains instructions on modifying the services available through the site.
+This is the README file for https://github.com/isabellekosteniuk/service-catalogue. This document contains instructions on modifying the services available through the site. To run the page, download this repository, unzip, and move to a permanent location on your machine. Open 'index.html' in your browser, and enjoy!
 
 Adding Service
 
@@ -77,18 +77,18 @@ Modifying emails
 example: The email object looks like this:
 
 	emails={
-		it:"+Ombudsman IT Services-Ombudsman Services TI@Ombudsman@Ottawa-Hull", 
-		records:"+Ombudsman Records Room Services-Ombudsman services de la salle des archives@Ombudsman@Ottawa-Hull", 
-		corp:"+Ombudsman Corporate Services-Ombudsman Services Coporatifs@Ombudsman@Ottawa-Hull",
+		it:"isabellekosteniuk@gmail.com", 
+		records:"", 
+		corp:"",
 		};
 
  	To add a new administrative officer email address, change the object to this:
 
 	emails={
-		it:"+Ombudsman IT Services-Ombudsman Services TI@Ombudsman@Ottawa-Hull", 
-		records:"+Ombudsman Records Room Services-Ombudsman services de la salle des archives@Ombudsman@Ottawa-Hull", 
-		corp:"+Ombudsman Corporate Services-Ombudsman Services Coporatifs@Ombudsman@Ottawa-Hull",
-		adminOfficer:"admin@Ombudsman.ca",
+		it:"isabellekosteniuk@gmail.com", 
+		records:"", 
+		corp:"",
+		adminOfficer:"example@example.com",
 		};
 
 	Any service that uses this address as a point of contact should contain the following line:
