@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app = "serviceApp">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/layout.css">
+	<script src="scripts/libraries/angular.js"></script>
+	<script src="scripts/libraries/angular-route.js"></script>
+	<script src="scripts/serviceApp.js"></script>
+	<title> Ombudsman Corporate Service Catalogue</title>
+</head>
+
+<body ng-controller = "mainController">
+
+	<div class="flex-container">
+	
+	<header>
+  		<img src= "ombudsman-logo-index.png"><h1>Ombudsman Corporate Services</h1>
+	</header>
+
+	<nav class="nav" ng-controller = "mainController">
+
+		<a href = "#/" style="text-decoration:none"><h2>Services</h2></a>
+			<div ng-repeat = "catagory in catalogue track by $index" ng-init = "idMain = $index">
+				<button ng-click = "clicked = buttonClick(idMain, clicked)"  class="accordion">{{catagory.name}}</button>
+				<div ng-repeat = "service in catagory.services |filter:query track by $index" ng-init = "idSub = $index">
+					<ul ng-show = "clicked"><a href = "#/{{idMain}}/{{idSub}}">{{service.name}}</a></ul>
+				</div>
+			</div>
+	</nav>
+
+	<article class="article">
+		<div ng-view></div>
+	</article>
+
+	<script type="text/ng-template" id="search.html">
+
+		<div class="landing">
+			<h1> Welcome to the Corporate Services Catalogue! </h1>
+			<h3> Use the navigation pane on the left or the search bar below to find out more about the services offered to you</h3>
+
+		</div>
+
+		<label><input placeholder="Search.." size="50" ng-model="query"></label>
+		<div ng-repeat = "catagory in catalogue | filter: query track by $index" ng-init = "idMain = $index">
+		<a style="text-decoration:none" href="#/{{idMain}}"><h2>{{catagory.name}}</h2></a>
+		<div ng-repeat = "service in catagory.services | filter:query" ng-init="idx = $index">
+			<p>
+			<a href = "#/{{idMain}}/{{idx}}">{{service.name}}</a>
+			{{service.about}}
+			</p>
+		</div>
+		</div>
+
+	</script>
+	
+	<script type="text/ng-template" id="main.html">
+		<h2>{{name}}</h2>
+		<p>{{message}}</p>
+
+		<label><input placeholder=" Search.." size="50" ng-model="query"></label>
+
+		<div ng-repeat = "service in services | filter:query" ng-init="idx = $index">
+			<p>
+			<a href = "#/{{idMain}}/{{idx}}">{{service.name}}</a>
+			{{service.about}}
+			</p>
+
+		</div>
+
+
+			<p><b><a back id="back_button">Back</a></b></p>		
+	</script>
+
+	<script type="text/ng-template" id="page.html">
+		<h2>{{name}}</h2>
+		<div ng-repeat = "description in descriptions"> <p>{{description}}</p> </div>
+		<div ng-repeat = "form in forms"><a target-blank href = "{{formLinks[$index]}}">{{form}}</a></div>
+		<div ng-bind-html = "mailTo"></div>
+		<p><b><a back id="back_button">Back</a></b></p>
+	</script>
+
+
+
+
+<footer>DND/CAF Ombudsman 2018  |   <a href = "mailto: +Ombudsman IT Services-Ombudsman Services TI@Ombudsman@Ottawa-Hull?Subject=Broken%20Link" >Report a Broken Link</a></footer>
+
+</div>
+
+</body>
+</html>
+
