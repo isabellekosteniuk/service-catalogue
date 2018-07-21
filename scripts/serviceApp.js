@@ -20,13 +20,13 @@ app.service('mainService', function() { //Contains all service data, shareable t
 	
 	//Email Addresses
 	emails={
-		it:"+Ombudsman IT Services-Ombudsman Services TI@Ombudsman@Ottawa-Hull", 
-		records:"P-OTG.OmbsRecRoomSvs@intern.mil.ca", 
-		corp:"P-OTG.Reception@intern.mil.ca",
-		finance: "+Ombudsman-Finance@Ombudsman@Ottawa-Hull",
-		hr: "OmbudsmanHRServices.OmbudsmanServicesRH@forces.gc.ca",
-		translation: "P-OTG.OmbTranslation@intern.mil.ca",
-		litigation: "P-OTG.OmbLitigaHold@intern.mil.ca"
+		it:"", 
+		records:"", 
+		corp:"",
+		finance: "",
+		hr: "",
+		translation:"",
+		litigation: "",
 		};
 	
 	this.catalogue = [
@@ -113,7 +113,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 
 					{
 						name:'Outlook Signature Block', 
-						instructions: ['Signature blocks can be added / changed / modified in Outlook by following the steps outlined in the link below. Users must adopt the new signature block format in accordance with the Treasury Board of Canada Secretariatís new Standard on Email Management. The standard states that signature blocks must appear in both official languages and include a separate section for each language.',
+						instructions: ['Signature blocks can be added / changed / modified in Outlook by following the steps outlined in the link below. Users must adopt the new signature block format in accordance with the Treasury Board of Canada Secretariat‚Äôs new Standard on Email Management. The standard states that signature blocks must appear in both official languages and include a separate section for each language.',
 								'The following formatted should be used in all signature blocks:',
 								'- Sans-serif font style, such as Verdana, Calibri, or Arial',
 								'- 10 point font size',
@@ -173,7 +173,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 								'Supply room locations:',
 								'12th Floor - Room 1253',
 								'13th Floor - Room 1341',
-								'If you need specialty items such as a book, desk fan, table light or any particular office supplies (pens, folders, notebooksÖ) please use the email link below',
+								'If you need specialty items such as a book, desk fan, table light or any particular office supplies (pens, folders, notebooks‚Ä¶) please use the email link below',
 								'If the request is not sent to the positional mailbox directly, your request may be delayed.',
 								'Please note that supplies are ordered on Wednesdays and have a 24-48 hour delivery time frame. Please plan ahead for your supply requirements. If something is required urgently, please indicate URGENT in the subject line of the request so that it can be treated accordingly.',
 
@@ -323,7 +323,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						instructions: ['Note: Unless specifically requested by the sender, Canada Post mail is *not* tracked.',
 								'For tracking, time-sensitive mail, and other special requests, please complete the Special Services Mail Request form (available below)',
 								'Mail needs to be packaged and/or put into envelopes before being given to the mailroom. If the correct envelopes are not available in the supply rooms, please see the mailroom.',
-								'Mail sent via Canada Post needs to conform to Canada Postís addressing standards. Please see link below for the current standard. ',
+								'Mail sent via Canada Post needs to conform to Canada Post‚Äôs addressing standards. Please see link below for the current standard. ',
 								'For any questions, please send an email using the link below.'
 								],
 						forms:['Special Services Mail Request Form EN','Special Services Mail Request Form FR', 'Canada Post Addressing Standards'],
@@ -364,7 +364,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 					{ 
 						name:'By-Hand Delivery', 
 						instructions: ['Note: By-hand services are provided only when the Mail Clerk is onsite and the delivery address is located close to 100 Metcalfe Street. Another option is the local courier service.',
-								'A by-hand delivery requires the completion of the DND 728 form (available below). The DND 728 form must be completed and the ìConsignee\ís Copyî placed in the envelope prior to the Mail Clerk delivering the envelope. The ìOriginator\ís File Copyî and ìTo Be Signed and Returned to Originatorî copies are to be handed to the Mail Clerk prior to delivery. The DND 728 form allows for tracking of delivery and receipt.',
+								'A by-hand delivery requires the completion of the DND 728 form (available below). The DND 728 form must be completed and the ‚ÄúConsignee\‚Äôs Copy‚Äù placed in the envelope prior to the Mail Clerk delivering the envelope. The ‚ÄúOriginator\‚Äôs File Copy‚Äù and ‚ÄúTo Be Signed and Returned to Originator‚Äù copies are to be handed to the Mail Clerk prior to delivery. The DND 728 form allows for tracking of delivery and receipt.',
 								'The name, exact address, and the phone number of the person receiving the delivery needs to be provided to the Mail Clerk prior to delivery.',
 								'For any questions, please send an email using the link below.',
 
@@ -406,7 +406,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 					{
 						name:'Visitors/Meeting Forms', 
 						about: '',
-						instructions: ['Visitors must report to commissionaires in the main lobby, who will notify the person responsible of their arrival. Visitors should be announced to commissionaires prior to meetings taking place using the commissionaireís meeting form:', 
+						instructions: ['Visitors must report to commissionaires in the main lobby, who will notify the person responsible of their arrival. Visitors should be announced to commissionaires prior to meetings taking place using the commissionaire‚Äôs meeting form:', 
 								'O:\\Administration\\Administration Forms\\Security',
 								'This is especially important if you are receiving more than one guest at a time. However the commissionaires would like to be notified of all guests expected to the building. Family and Friends also need to be signed in through the commissionaires.',  
 								'For more information, please see the information document using the link below.'
@@ -430,9 +430,9 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						instructions: ['The purpose of this phone line is for staff and their families to call and receive information during a crisis or emergency situation.  This is not a voicemail box and does not allow you to leave voicemails; it allows you to listen to a posted message',
 								'The number is 613 996 6363',
 								'Examples of why you would call this line (these are examples only and include but are not limited to what you see below):',
-								'- there is a city wide blackout and you are asked not to come to work but to stand by for further instructions ñ you would call this line periodically for updates to the officeís status i.e. whether or not the office is closed, when it is reopening. ',
-								'- Overnight, there is a building emergency such as a fire, you wake up in the morning to hear on the news of the fire and that the building is closed ñ you are unsure of when and where you are supposed to report to work ñ you would call this line for instructions and information regarding the status of the office',
-								'- You have been asked to come to work either at this location or a temporary location during an emergency situation ñ your family members can call this line to obtain information about the status of our office',
+								'- there is a city wide blackout and you are asked not to come to work but to stand by for further instructions ‚Äì you would call this line periodically for updates to the office‚Äôs status i.e. whether or not the office is closed, when it is reopening. ',
+								'- Overnight, there is a building emergency such as a fire, you wake up in the morning to hear on the news of the fire and that the building is closed ‚Äì you are unsure of when and where you are supposed to report to work ‚Äì you would call this line for instructions and information regarding the status of the office',
+								'- You have been asked to come to work either at this location or a temporary location during an emergency situation ‚Äì your family members can call this line to obtain information about the status of our office',
 
 								],
 
@@ -467,7 +467,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						instructions: ['Please note that the procedure for requesting an ergonomic assessment is as follows:',
 								'1) Obtain a note from your doctor / chiropractor / physiotherapist',
 								'2) Send the designated positional mailbox a written request by email indicating that you require an assessment. Verbal requests are not acceptable and cannot be processed until they are in writing.',
-								'3) The designated person will coordinate your assessment ñ approximately 1 month wait for the assessment.',
+								'3) The designated person will coordinate your assessment ‚Äì approximately 1 month wait for the assessment.',
 								'Your written request must include the following information:',
 								'- Confirmation that you have received a doctors note',
 								'- Brief description (no medical details) of the injury / why you require the assessment',
@@ -524,7 +524,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						name:'CCM Mercury', 
 						instructions: [
 								'For all CCM resources and standard operating procedures, visit the CCM folder on the Protected B network. It can be found in the CCM folder on the O:\\Drive (O:\\CCM).',
-								'For all requests including removal of attachments (accidentally/unintentionally added to file), please send an email using the link below. Include a detailed summary of the request as well as the file number or some kind of file identifier if a file number is not present. In some circumstances, a Director\ís approval may be required. ',
+								'For all requests including removal of attachments (accidentally/unintentionally added to file), please send an email using the link below. Include a detailed summary of the request as well as the file number or some kind of file identifier if a file number is not present. In some circumstances, a Director\‚Äôs approval may be required. ',
 								'For more information on requesting services please consult the SOP located in the CCM folder. ',
 
 								],
@@ -590,7 +590,7 @@ app.service('mainService', function() { //Contains all service data, shareable t
 							'Justice - Privacy Act',
 							'Justice - Library and Archives Canada Act',
 							'LAC - Library and Archives Disposition Authorization #2016-001 for Transitory Records', 
-							'DND - Defence Administrative Orders and Directives (DAODs) 6000-0 ñ Information Management and Information Technology', 
+							'DND - Defence Administrative Orders and Directives (DAODs) 6000-0 ‚Äì Information Management and Information Technology', 
 							'DND - Defence Administrative Orders and Directives (DAODs) 6001-0 - Information Management',
 							'DND - Defence Administrative Orders and Directives (DAODs) 6001-1 - Recordkeeping',
 
@@ -638,9 +638,9 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						name:'Pay Action Request (PAR)', 
 						about: '',
 						instructions: [
-								'Pay Action Request Form ñ Managers Responsibility:',
+								'Pay Action Request Form ‚Äì Managers Responsibility:',
 								'Complete the following fields:',
-								'- Section 1 ñ Employee Information',
+								'- Section 1 ‚Äì Employee Information',
 								'- Section 2 - Work Type*',
 								'- Section 3 - Sub Type*',
 								'- Section 4 - Requestor (Staffing/Manager)',
@@ -821,12 +821,12 @@ app.service('mainService', function() { //Contains all service data, shareable t
 						forms: ['Individual Travel Authority Form D2999M', 
 							'Lost Receipt Declaration', 
 							'Record of Travel Expenses EN',
-							'RelevÈ des frais de dÈplacement FR',
+							'Relev√© des frais de d√©placement FR',
 							'Reference to kilometric rates - Annex B of NJC'],
 						formLinks: ['forms/3 - Individual Travel Authority Form_d2999m (2016).pdf',
 							'forms/Lost Receipt Declaration.pdf', 
 							'forms/Record of Travel Expenses EN.xlsx',
-							'forms/RelevÈ des frais de dÈplacement FR.xls',
+							'forms/Relev√© des frais de d√©placement FR.xls',
 							'http://www.njc-cnm.gc.ca/directive/d10/v238/en']
 					
 					},
